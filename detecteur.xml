@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="detecteur1"
+	activate="activate" deactivate="deactivate">
+   <implementation class="impl.DetecteurImpl"/>
+   <service>
+   		<provide interface="api_bundle.Detecteur" />
+   </service>
+</scr:component>

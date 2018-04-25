@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="controlDetecteur"
+	activate="activate" deactivate="deactivate">
+   <implementation class="controldetecteur.controlDetecteurImpl"/>
+   <reference name="DETECT"
+   		interface="api_bundle.Detecteur"
+   		cardinality="0..n"
+   		policy="dynamic"
+   		bind="setDetecteur"
+   		unbind="unsetDetecteur"
+   /> 
+   <reference name="ALARME"
+   		interface="api_bundle.Alarme"
+   		cardinality="0..n"
+   		policy="dynamic"
+   		bind="setAlarme"
+   		unbind="unsetAlarme"
+   /> 
+</scr:component>
